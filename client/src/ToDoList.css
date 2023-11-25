@@ -1,0 +1,107 @@
+.todo-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.todo-form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    margin-right: -1px;
+}
+
+.todo-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.todo-form button:hover {
+    background-color: #0056b3;
+}
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.todo-text {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.delete-btn {
+    padding: 6px 12px;
+    /* ... other styles ... */
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+
+.todo-item {
+    /* Existing styles */
+    transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+.todo-list-container {
+    background-color: #ffffff; /* Change to a clean white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow for prominence */
+    padding: 30px; /* More internal spacing */
+    margin: auto; /* Center the container */
+    width: 80%; /* Increase width */
+    max-width: 800px; /* Limit the maximum width */
+}
+
+.todo-list-heading {
+    font-family: 'Arial', sans-serif; /* You can choose a more sophisticated font */
+    font-size: 36px; /* Increased size */
+    font-weight: bold; /* Make it bold */
+    color: #343a40; /* A deep color for professionalism */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center alignment */
+    margin-bottom: 30px; /* More spacing below the heading */
+}
+
+.todo-list-container {
+    /* Existing styles */
+    padding-top: 40px; /* More padding at the top */
+}
+
