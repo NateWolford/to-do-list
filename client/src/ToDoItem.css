@@ -1,3 +1,10 @@
+.todo-item-container {
+    text-align: center;
+    margin: 0 auto; /* Center horizontally */
+    max-width: 50%;
+    margin-bottom: 10px; /* Add margin to create space between items */
+}
+
 .todo-item {
     padding: 10px;
     background-color: #fff;
@@ -12,20 +19,42 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.todo-text {
-    font-size: 16px;
-    color: #333;
-}
-
-.todo-item {
-    background-color: #f8f9fa; /* Slightly different background */
-    padding: 10px;
-    margin-bottom: 10px;
+.todo-checkbox {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #28a745;
     border-radius: 4px;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-/* Rest of the styles */
+.todo-checkbox:checked {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.todo-text {
+    font-size: 18px;
+    color: #333;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.todo-text.completed {
+    text-decoration: line-through;
+}
+
+/* Improved delete button */
+.delete-button {
+    font-size: 18px; /* Set the font size to match item text */
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 8px 16px; /* Add padding for a more modern look */
+    border-radius: 5px; /* Round the corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.delete-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
