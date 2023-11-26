@@ -1,23 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ToDoForm.css';
 
-function ToDoForm({ addToDoItem }) {
-    const [inputValue, setInputValue] = useState('');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        addToDoItem(inputValue);
-        setInputValue('');
-    };
+function ToDoForm({ onSubmit, inputValue, setInputValue }) {
+    // Removed the local useState, using props instead
 
     return (
         <div className="todo-form">
-            <form onSubmit={handleSubmit} className="d-flex justify-content-center align-items-center">
+            <form onSubmit={onSubmit} className="d-flex justify-content-center align-items-center"> {/* Use onSubmit prop here */}
                 <input
                     type="text"
                     className="form-control mr-2"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
+                    value={inputValue} // Controlled input using inputValue from props
+                    onChange={(e) => setInputValue(e.target.value)} // Update using setInputValue from props
                     placeholder="Add new task"
                 />
                 <button type="submit" className="btn btn-primary">Add</button>

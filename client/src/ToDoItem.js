@@ -1,11 +1,23 @@
 import React from 'react';
-import './ToDoItem.css'; // Ensure you have this CSS file
+import './ToDoItem.css';
 
-function ToDoItem({ item, deleteToDoItem }) {
+function ToDoItem({ item, deleteToDoItem, toggleComplete }) {
     return (
-        <div className="todo-item d-flex justify-content-between align-items-center mb-2">
-            <span className="todo-text">{item}</span>
-            <button onClick={() => deleteToDoItem(item)} className="btn btn-sm btn-outline-danger">Delete</button>
+        <div className="todo-item-container">
+            <div className="todo-item">
+                <input 
+                    type="checkbox" 
+                    checked={item.completed} 
+                    onChange={() => toggleComplete(item.id)}
+                    className={`todo-checkbox ${item.completed ? 'completed' : ''}`}
+                />
+                <span className={`todo-text ${item.completed ? 'completed' : ''}`}>
+                    {item.text}
+                </span>
+                <button onClick={() => deleteToDoItem(item.id)} className="btn btn-sm btn-danger delete-button">
+                    Delete
+                </button>
+            </div>
         </div>
     );
 }
